@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-image: url('/src/logo/clear-sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: 0 0;
+  animation: moveBackground 5s linear forwards;
+  background-attachment: fixed;
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -100px; 
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+
+}
+
+.search-container {
+  
+}
+.search {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-left: 37px;
+  width: 40vh;
 }
 
-.App-link {
-  color: #61dafb;
+.search-input {
+  background: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.search-input:focus {
+  background: transparent;
+}
+
+.search-icon-box {
+  margin: 10px;
+  color: rgb(2, 56, 77);
+  background-color: rgb(68, 199, 246);
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  transform: scale(1.3);
+  background:transparent;
+}
+
+
+
+.weather-card {
+  height: 50vh;
+  margin-top: 30px;
+  border: solid transparent;
+}
+
+.weather-icon {
+  width: 200px;
+}
+
+.weather-body {
+  padding: 1rem;
+  margin: 0;
+}
+.row, .col {
+  margin: 0px;
+}
+
+.top {
+  text-align: center;
+  font-size: 0.65rem;
+  padding: 2vh;
+  width: 100%;
+  
+}
+
+@media(max-width:768px){
+  .top{
+      text-align: center;
+      font-size: 0.4rem;
+      padding: 1vh;      
   }
-  to {
-    transform: rotate(360deg);
+  .top .col{
+      padding:0 0.5vh;
   }
 }
+
+.temp {
+  padding: 3vh 0vh;
+  text-align: center;
+  font-size: 9vh;
+  font-weight: bold;
+}
+
+@media(max-width:768px)
+{
+    .temp{
+        padding: 3vh 0vh;
+        text-align: center;
+        font-size: 9vh;
+        font-weight: bold;
+    }
+}
+@media(min-height:812px) and (min-width:769px)
+{
+    .temp{
+        padding: 3vh 0vh;
+        text-align: center;
+        font-size: 9vh;
+        font-weight: bold;
+    }
+}
+
+.time {
+  align-self: center;
+  font-size: 0.8rem;
+}
+
+@media(max-width:768px)
+{
+    .time{
+        align-self: center;
+        font-size: o.8rem;
+    }
+    .time h2{
+        font-size: 0.9rem;
+    }
+    .col-5{
+        padding: 1vh 0;
+    }
+}
+
+/* sunrise and sunset title */
+.sunset {
+  margin-top: -18px;
+}
+
+.sunset p img , .sunrise p img {
+
+}
+
+.sunrise {
+  margin-top: -10px;
+}
+
+.weather-card-container {
+  margin-top: 30px;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;  
+}
+
+.weather-detail-card {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border: none;
+  box-shadow: 0px 2px 4px rgb(8, 109, 146);
+  margin-top: 20px;
+  background: transparent;
+}
+
+.weather-card-body {
+  overflow: hidden;
+}
+
+.weather-detail-card .card-title {
+  opacity: 0.6;
+  background: transparent;
+}
+
+.card-content {
+  background: transparent;
+}
+.weather-detail-card .card-content .value {
+  font-size: 20px;
+  font-weight: bold;
+  background: transparent;
+}
+.weather-detail-card:hover {
+  transform: scale(1.1); 
+}
+
+
+
